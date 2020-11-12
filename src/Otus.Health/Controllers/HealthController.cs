@@ -1,6 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 
-namespace Otus.Homework1.Controllers
+namespace Otus.Health.Controllers
 {
     [Route("/")]
     public class HealthController : ControllerBase

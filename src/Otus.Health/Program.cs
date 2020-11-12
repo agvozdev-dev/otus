@@ -1,18 +1,16 @@
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+using System.Net;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Hosting;
-using Microsoft.Extensions.Logging;
 
-namespace Otus.Homework1
+namespace Otus.Health
 {
     public class Program
     {
         public static void Main(string[] args)
         {
+            Console.WriteLine($"HOSTNAME: {Dns.GetHostName()}");
+        
             CreateHostBuilder(args).Build().Run();
         }
 
