@@ -4,6 +4,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{5EBA0761-F48
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Otus.Health", "src\Otus.Health\Otus.Health.csproj", "{9D0CD225-D76D-4391-8496-2D7227867B67}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Otus.Crud", "src\Otus.Crud\Otus.Crud.csproj", "{213CFF05-D58B-40A3-B18C-72B5A3359057}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -11,11 +13,16 @@ Global
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{9D0CD225-D76D-4391-8496-2D7227867B67} = {5EBA0761-F484-4B72-AE0B-91355BF9F444}
+		{213CFF05-D58B-40A3-B18C-72B5A3359057} = {5EBA0761-F484-4B72-AE0B-91355BF9F444}
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{9D0CD225-D76D-4391-8496-2D7227867B67}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{9D0CD225-D76D-4391-8496-2D7227867B67}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9D0CD225-D76D-4391-8496-2D7227867B67}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9D0CD225-D76D-4391-8496-2D7227867B67}.Release|Any CPU.Build.0 = Release|Any CPU
+		{213CFF05-D58B-40A3-B18C-72B5A3359057}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{213CFF05-D58B-40A3-B18C-72B5A3359057}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{213CFF05-D58B-40A3-B18C-72B5A3359057}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{213CFF05-D58B-40A3-B18C-72B5A3359057}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

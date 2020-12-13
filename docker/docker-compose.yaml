@@ -1,0 +1,19 @@
+version: '3.1'
+
+services:
+  postgres:
+    container_name: postgres
+    image: postgres
+    environment:
+      POSTGRES_DB: otus
+      POSTGRES_USER: agvozdev
+      POSTGRES_PASSWORD: 123qwe
+      PGDATA: /data/posgres
+    ports: 
+      - "5432:5432"
+    volumes: 
+      - postgres:/data/postgres
+    restart: always
+  
+volumes: 
+  postgres:
