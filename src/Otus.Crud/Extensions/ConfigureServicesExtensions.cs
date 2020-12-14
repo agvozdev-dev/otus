@@ -1,8 +1,7 @@
-using FluentMigrator.Runner;
-using FluentMigrator.Runner.Processors;
-using FluentMigrator.Runner.Processors.Postgres;
+using System;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Hosting;
 using Otus.Crud.Infrastructure;
 using Otus.Crud.Options;
 using Otus.Crud.Services;
@@ -14,6 +13,18 @@ namespace Otus.Crud.Extensions
         public static IServiceCollection RegisterOptions(this IServiceCollection services, IConfiguration configuration)
         {
             services.AddSingleton(configuration.GetSection("Database:Otus").Get<DbOptions>());
+
+            return services;
+        }
+        
+        public static IServiceCollection RegisterOptions(this IServiceCollection services)
+        {
+            var dbOptions = new DbOptions
+                            {
+                                ConnectionString = Environment.GetEnvironmentVariable("ConnectionString")
+                            };
+            
+            services.AddSingleton(dbOptions);
 
             return services;
         }

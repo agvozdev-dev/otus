@@ -1,3 +1,4 @@
+using System;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
@@ -19,13 +20,15 @@ namespace Otus.Crud
         public void ConfigureServices(IServiceCollection services)
         {
             services
-                .RegisterOptions(Configuration)
+                .RegisterOptions()
                 .RegisterDependencies()
                 .AddMvcCore(options => options.EnableEndpointRouting = false);
         }
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
+            Console.WriteLine($"Environment: {env.EnvironmentName}");
+            
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage()

@@ -1,0 +1,19 @@
+replicaCount: 2
+
+image:
+  repository: otus-user-api
+  tag: latest
+
+service:
+  type: NodeType
+  port: 8000
+
+# переопределение параметров для сабчарта postgres
+externalPostgresql:
+  enable: true
+  postgresqlUsername: agvozdev
+  postgresqlPassword: 123qwe
+  postgresqlDatabase: otus
+  service:
+    port: "5432"
+  
