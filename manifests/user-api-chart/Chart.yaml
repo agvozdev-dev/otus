@@ -1,17 +1,17 @@
 apiVersion: v2
 name: user-api-chart
-description: A Helm chart for Kubernetes
+description: A user API Helm chart for Kubernetes
 
 type: application
 
-version: 0.1.0
-
+version: 1.0.0
 appVersion: 1.0.0
 
 dependencies:
   - name: postgresql
+    alias: postgresql
     version: 10.x.x
     repository: https://charts.bitnami.com/bitnami
     condition: postgresql.enabled
     tags:
-      - user-api-app-database
+      - user-api-database
