@@ -42,7 +42,7 @@ spec:
       - name: post-install-job
         env:
           - name: ConnectionString
-            value: {{ printf "Server=%s;Port=%s;Database=%s;User Id=%s;Password=%s;" (include "postgresql.fullname" .) .Values.postgresql.service.port .Values.postgresql.postgresqlDatabase .Values.postgresql.postgresqlUsername .Values.postgresql.postgresqlPassword | quote }}
+            value: {{ printf "postgresql://%s:%s@%s:%s/%s" .Values.postgresql.postgresqlUsername .Values.postgresql.postgresqlPassword (include "postgresql.fullname" .) .Values.postgresql.service.port .Values.postgresql.postgresqlDatabase  | quote }}
         image: postgres:latest
         command:
           - sh
